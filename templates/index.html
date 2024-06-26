@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation</title>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <h1>Movie Recommendation</h1>
+    <form id="recommendation-form">
+        <label for="genre">Genre:</label>
+        <input type="text" id="genre" name="genre" required><br><br>
+
+        <label for="max_runtime">Max Runtime (in minutes):</label>
+        <input type="number" id="max_runtime" name="max_runtime" required><br><br>
+
+        <label for="streaming_services">Streaming Services (comma-separated):</label>
+        <input type="text" id="streaming_services" name="streaming_services" required><br><br>
+
+        <button type="submit">Get Recommendations</button>
+    </form>
+
+    <h2>Recommendations:</h2>
+    <ul id="recommendations"></ul>
+</body>
+</html>
